@@ -7,13 +7,9 @@ grades = list(map(int, grades))
 
 minimum = min(grades)
 maximum = max(grades)
-
-average = sum(grades) / len(grades)
-average = round(average, 2)
-
+average = round(sum(grades) / len(grades), 2)
 mean = round(statistics.mean(grades), 2)
 median = statistics.median(grades)
 
 result_string = "Minimum: {}\nMaximum: {}\nAverage: {:.2f}\nMean: {}\nMedian: {:.2f}".format(minimum, maximum, average, mean, median)
-
 print(result_string)

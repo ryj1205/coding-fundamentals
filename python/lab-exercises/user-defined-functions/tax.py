@@ -4,11 +4,11 @@ def getIncomeTax(salary):
     tax_percentage = 0
 
     # Obtain the tax percentage bracket based on the salary inputted:
-    if salary >= personal_allowance and salary <= 34500:
+    if salary >= personal_allowance and salary <= 50270:
         tax_percentage = 20
-    elif salary >= 34501 and salary <= 150000:
+    elif salary >= 50271 and salary <= 125140:
         tax_percentage = 40
-    elif salary >= 150001:
+    elif salary >= 125141:
         tax_percentage = 45
     else:
         tax_percentage = 0

@@ -1,5 +1,3 @@
-###########################################
-
 def getIncomeTax(salary):
 
     personal_allowance = 12570
@@ -32,5 +30,3 @@ print("The taxable amount you will pay on £28000 is - £" + str(getIncomeTax(28
 print("The taxable amount you will pay on £35000 is - £" + str(getIncomeTax(35000)))  # -- 40%
 print("The taxable amount you will pay on £150000 is - £" + str(getIncomeTax(150000))) # -- 40%
 print("The taxable amount you will pay on £160000 is - £" + str(getIncomeTax(160000))) # -- 45%
-
-###########################################

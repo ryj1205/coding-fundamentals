@@ -11,5 +11,5 @@ average = round(sum(grades) / len(grades), 2)
 mean = round(statistics.mean(grades), 2)
 median = statistics.median(grades)
 
-result_string = "Minimum: {}\nMaximum: {}\nAverage: {:.2f}\nMean: {}\nMedian: {:.2f}".format(minimum, maximum, average, mean, median)
+result_string = "Minimum: {}\nMaximum: {}\nAverage: {}\nMean: {}\nMedian: {}".format(minimum, maximum, average, mean, median)
 print(result_string)

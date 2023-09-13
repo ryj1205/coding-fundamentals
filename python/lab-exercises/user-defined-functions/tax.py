@@ -27,7 +27,7 @@ def getIncomeTax(salary):
 
 ###########################################
 
-print("The taxable amount you will pay on £12000 is - £" + str(getIncomeTax(12000)))  # -- 20%
+print("The taxable amount you will pay on £12000 is - £" + str(getIncomeTax(12000)))  # -- 0%
 print("The taxable amount you will pay on £28000 is - £" + str(getIncomeTax(28000)))  # -- 20%
 print("The taxable amount you will pay on £35000 is - £" + str(getIncomeTax(35000)))  # -- 40%
 print("The taxable amount you will pay on £150000 is - £" + str(getIncomeTax(150000))) # -- 40%

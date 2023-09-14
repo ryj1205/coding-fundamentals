@@ -1,31 +1,34 @@
 
-import pyodbc
+#import pyodbc
 
 def executeQuery(sql_query):
+    try:
+        connectionString = r'DRIVER={ODBC Driver 13 for SQL Server};SERVER=.\SQLExpress;DATABASE=qastore;Trusted_Connection=yes'
+        conn = pyodbc.connect(connectionString)
+        cur = conn.cursor()
+        cur.execute(sql_query)
+        conn.commit()
+        conn.close()
+    except Exception as ex:
+        print("executeQuery - ERROR - ", ex)
+        return None
 
-    connectionString = r'DRIVER={ODBC Driver 13 for SQL Server};SERVER=.\SQLExpress;DATABASE=qastore;Trusted_Connection=yes'
+# Part 1 – Check whether the Students table already exists:
+check_query = """ IF EXISTS(SELECT TABLE_NAME,TABLE_SCHEMA FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Student' AND TABLE_SCHEMA = 'dbo') BEGIN DROP TABLE Student END"""
+executeQuery(check_query)
 
-    conn = pyodbc.connect(connectionString)
-    cur = conn.cursor()
-
-    cur.execute(sql_query)
-    conn.commit()
-
-    conn.close()
-
-# Part 1 – Create Table
-    # Use the slide code to create a table called Student for storing student data. Check that the table is created using the SQL Management Studio.
-
+# Part 1 – Create the Students table:
 create_query = "CREATE TABLE Student ( StudentID int NOT NULL, FirstName nvarchar(40) NOT NULL, Surname nvarchar(30) NULL, Course nvarchar(30) NULL, City nvarchar(15) NULL )"
 executeQuery(create_query)
 
 # Part 2 – Practice Executing Insert Commands
-    # Insert a few students' records into the Student table.
-    # Be inventive! You can store the records in a CSV file. Read the data and then insert the data into the database.
-    # You can use the names of the students in the class and details of their course and the city they live in.
-    # Check the records are inserted using the Database Management Studio.
+students_object = open("python/lab-exercises/databases/students.csv")
+students_data = students_object.readlines()
 
-
+for row in students_data:
+    data_split = row.split(",")
+    insert_query = "INSERT INTO [Students] (StudentID, FirstName, Surame, Course, City) VALUES ({}, {}, {}, {}, {})".format(data_split[0], data_split[1], data_split[2], data_split[3], data_split[4])
+    executeQuery(insert_query)
 
 # Part 3 – Practice Executing an Update Command
     # Update the record of one of the students.

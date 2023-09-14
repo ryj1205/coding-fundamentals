@@ -1,5 +1,4 @@
 
-from turtle import update
 import pyodbc
 
 def executeQuery(sql_query):

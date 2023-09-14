@@ -13,3 +13,8 @@ conn.close()
 
 for row in result:
     print(row)
+
+
+'''
+INSERT INTO [salesperson] ([first_name],[last_name],[dept_no],[salary],[sales_target],[county],[post_code],[tel],[notes]) VALUES ('Ryan','Jackson',4,1000000,250000,'Derbyshire','S458HZ','01246 266605','These are notes')
+'''

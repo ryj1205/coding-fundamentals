@@ -1,4 +1,5 @@
 
+from turtle import update
 import pyodbc
 
 def executeQuery(sql_query):
@@ -34,3 +35,5 @@ for row in students_data:
     # Update the record of one of the students.
     # Check that it has worked by reading the data in the Management Studio.
 
+update_query = "UPDATE [Student] SET [Course] = 'Pro Wrestling' WHERE [StudentID] = 1"
+executeQuery(update_query)

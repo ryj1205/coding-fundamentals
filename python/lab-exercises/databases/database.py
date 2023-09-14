@@ -1,5 +1,5 @@
 
-#import pyodbc
+import pyodbc
 
 def executeQuery(sql_query):
     try:
@@ -27,7 +27,7 @@ students_data = students_object.readlines()
 
 for row in students_data:
     data_split = row.split(",")
-    insert_query = "INSERT INTO [Students] (StudentID, FirstName, Surame, Course, City) VALUES ({}, {}, {}, {}, {})".format(data_split[0], data_split[1], data_split[2], data_split[3], data_split[4])
+    insert_query = "INSERT INTO [Student] ([StudentID], [FirstName], [Surname], [Course], [City]) VALUES ({}, '{}', '{}', '{}', '{}')".format(data_split[0], data_split[1], data_split[2], data_split[3], data_split[4])
     executeQuery(insert_query)
 
 # Part 3 – Practice Executing an Update Command

@@ -1,8 +1,9 @@
 #####################################################################
 companies = []
 sales = []
-car_sales_monthly_total = []
-car_sales_company_total = []
+#####################################################################
+monthly_total = []
+company_total = []
 #####################################################################
 # Create file object to read from the car.csv file:
 car_sales_object = open("Python/car.csv")
@@ -31,8 +32,8 @@ print(sales)
 # Total yearly sales by each manufacturer:
 i = 0
 for row in sales:
-    car_sales_company_total.append(companies[i] + " - " + str(sum(row)))
+    company_total.append(companies[i] + " - " + str(sum(row)))
     i += 1
 #####################################################################
-print(car_sales_company_total)
+print(company_total)
 #####################################################################

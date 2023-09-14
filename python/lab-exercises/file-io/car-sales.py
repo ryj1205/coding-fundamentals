@@ -24,7 +24,6 @@ for row in car_sales:
 
 # Sum of cars sold in each month:
 car_sales_monthly_total = [sum(x) for x in zip(*sales)]
-
 print(car_sales_monthly_total)
 
 # Total yearly sales by each manufacturer:
@@ -32,5 +31,4 @@ i = 0
 for row in sales:
     car_sales_company_total.append(companies[i] + " - " + str(sum(row)))
     i += 1
-
 print(car_sales_company_total)

@@ -5,16 +5,9 @@ connectionString = r'DRIVER={ODBC Driver 13 for SQL Server};SERVER=.\SQLExpress;
 conn = pyodbc.connect(connectionString)
 cur = conn.cursor()
 
-sql_query = "SELECT COUNT(*) AS 'No of Orders', [company].[company_name] FROM [QAStore].[dbo].[sale] INNER JOIN [company] ON [sale].[company_no] = [company].[company_no] WHERE [company].[company_name] LIKE 'Happy Heaters%' GROUP BY [company].[company_name]"
+sql_query = "INSERT INTO [salesperson] ([emp_no], [first_name],[last_name],[dept_no],[salary],[sales_target],[county],[post_code],[tel],[notes]) VALUES (56, 'Ryan','Jackson',4,1000000,250000,'Derbyshire','S458HZ','01246 266605','These are notes')"
 
-result = cur.execute(sql_query).fetchall()
+cur.execute(sql_query)
+cur.commit()
 
 conn.close()
-
-for row in result:
-    print(row)
-
-
-'''
-INSERT INTO [salesperson] ([first_name],[last_name],[dept_no],[salary],[sales_target],[county],[post_code],[tel],[notes]) VALUES ('Ryan','Jackson',4,1000000,250000,'Derbyshire','S458HZ','01246 266605','These are notes')
-'''

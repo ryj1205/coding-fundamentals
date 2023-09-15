@@ -23,7 +23,7 @@ class LetterCheck:
 ###########################################################################################################
 
 group_vowels = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"}
-group_straightlines = {"A", "E", "F", "H", "I", "K", "L", "M", "T", "W", "X", "Y", "Z"}
+group_straightlines = {"a", "e", "f", "h", "i", "k", "l", "m", "t", "w", "x", "y", "z", "A", "E", "F", "H", "I", "K", "L", "M", "T", "W", "X", "Y", "Z"}
 
 ###########################################################################################################
 
@@ -32,6 +32,9 @@ print(vowel_test.groupCheck())
 
 non_vowel_test = LetterCheck("b", group_vowels)
 print(non_vowel_test.groupCheck())
+
+straight_lines_test = LetterCheck("A", group_straightlines)
+print(straight_lines_test.groupCheck())
 
 straight_lines_test = LetterCheck("b", group_straightlines)
 print(straight_lines_test.groupCheck())

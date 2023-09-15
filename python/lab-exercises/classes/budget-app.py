@@ -30,7 +30,6 @@ class Budget:
         else:
             exit
 
-
     def withdrawFunds(self):
 
         # Ask user if they wish to withdraw:

@@ -50,12 +50,12 @@ class Budget:
     def transferFunds(self, otherPot):
 
         # Ask user if they wish to transfer:
-        user_confirmation = input("Would you like to withdraw any funds from the {} pot? (please answer Y or N)".format(self.pot))
+        user_confirmation = input("Would you like to transfer any funds from the {} pot to the {} pot? (please answer Y or N)".format(self.pot, otherPot.pot))
 
         if (user_confirmation == "Y"):
             # Ask user how much they wish to transfer:
             transfer_amount = int(input("How much do you wish to transfer from the {} pot into the {} pot?".format(self.pot, otherPot.pot)))
-            print("You have transferred a total of {} pounds from the {} pot, into the {} pot".format(transfer_amount, self.pot, otherPot.pot))
+            print("You have transferred a total of {} pounds from the {} pot into the {} pot".format(transfer_amount, self.pot, otherPot.pot))
             # Perform balance calculations:
             otherPot.funds = otherPot.funds + transfer_amount
             self.funds = self.funds - transfer_amount
@@ -91,3 +91,4 @@ clothing_budget.withdrawFunds()
 
 # Transfer funds from one pot to another:
 food_budget.transferFunds(clothing_budget)
+clothing_budget.transferFunds(food_budget)

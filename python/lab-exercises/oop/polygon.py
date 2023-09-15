@@ -27,21 +27,21 @@ class Square(Polygon):
 
     def area(self):
         area_calculation = self.width * self.height
-        return "This area of the square is {}".format(area_calculation)
+        return "Area of the square is {}".format(area_calculation)
 
     def perimeter(self):
         perimeter_calculation = 2 * (self.height + self.width)
-        return "This perimeter of the square is {}".format(perimeter_calculation)
+        return "Perimeter of the square is {}".format(perimeter_calculation)
 
 class Rectangle(Polygon):
 
     def area(self):
         area_calculation = self.width * self.height
-        return "This area of the rectangle is {}".format(area_calculation)
+        return "Area of the rectangle is {}".format(area_calculation)
 
     def perimeter(self):
         perimeter_calculation = 2 * (self.height + self.width)
-        return "This perimeter of the rectangle is {}".format(perimeter_calculation)
+        return "Perimeter of the rectangle is {}".format(perimeter_calculation)
 
 ##################################################################
 
@@ -61,23 +61,23 @@ print("")
 
 class GeometricShapes(Polygon):
 
-    def area(self):
+    def area(self, shape):
         area_calculation = self.width * self.height
-        return "This area of the shape is {}".format(area_calculation)
+        return "Area of the {} is {}".format(shape, area_calculation)
 
-    def perimeter(self):
+    def perimeter(self, shape):
         perimeter_calculation = 2 * (self.height + self.width)
-        return "This perimeter of the shape is {}".format(perimeter_calculation)
+        return "Perimeter of the {} is {}".format(shape, perimeter_calculation)
 
 ##################################################################
 
 square = GeometricShapes(10, 5)
-print(square.area())
-print(square.perimeter())
+print(square.area("square"))
+print(square.perimeter("square"))
 print("")
 
 rectangle = GeometricShapes(15, 10)
-print(rectangle.area())
-print(rectangle.perimeter())
+print(rectangle.area("rectangle"))
+print(rectangle.perimeter("rectangle"))
 
 ##################################################################

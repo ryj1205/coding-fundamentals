@@ -10,20 +10,30 @@
 
 class LetterCheck:
 
-    def __init__(self,passedletter):
-        self.vowels = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"}
+    def __init__(self,passedletter,passedgroup):
+        self.group = passedgroup
         self.letter = passedletter
 
-    def vowelCheck(self):
-        if (self.letter in self.vowels):
+    def groupCheck(self):
+        if (self.letter in self.group):
             return True
         else:
             return False
 
 ###########################################################################################################
 
-letter_test = LetterCheck("a")
-print(letter_test.vowelCheck())
+group_vowels = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"}
+group_straightlines = {"A", "E", "F", "H", "I", "K", "L", "M", "T", "W", "X", "Y", "Z"}
 
-letter_test = LetterCheck("b")
-print(letter_test.vowelCheck())
+###########################################################################################################
+
+vowel_test = LetterCheck("a", group_vowels)
+print(vowel_test.groupCheck())
+
+non_vowel_test = LetterCheck("b", group_vowels)
+print(non_vowel_test.groupCheck())
+
+straight_lines_test = LetterCheck("b", group_straightlines)
+print(straight_lines_test.groupCheck())
+
+###########################################################################################################

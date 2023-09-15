@@ -1,4 +1,4 @@
-# Import the random class
+# Import the random class:
 import random
 
 ###################################################################

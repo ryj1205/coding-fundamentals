@@ -1,4 +1,4 @@
-# Import the Abstract Base Class
+# Import the Abstract Base Class:
 from abc import ABC, abstractmethod
 
 ##################################################################

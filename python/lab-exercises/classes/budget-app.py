@@ -16,41 +16,54 @@ class Budget:
 
     def depositFunds(self):
 
-        # Ask user how much they wish to withdraw:
-        deposit_amount = int(input("How much would you like to deposit into the {} pot?".format(self.pot)))
+        # Ask user if they wish to deposit:
+        user_confirmation = input("Would you like to deposit any funds into the {} pot? (please answer Y or N)".format(self.pot))
 
-        # Perform balance calculations:
-        self.funds = self.funds + deposit_amount
+        if (user_confirmation == "Y"):
+            # Ask user how much they wish to withdraw:
+            deposit_amount = int(input("How much would you like to deposit into the {} pot?".format(self.pot)))
+            print("You have deposited {} pounds into the {} pot.".format(deposit_amount, self.pot))
+            # Perform balance calculations:
+            self.funds = self.funds + deposit_amount
+            # Display updated pot balance:
+            self.displayFunds()
+        else:
+            exit
 
-        # Confirm action to user and display updated balances to user:        
-        print("You have deposited {} pounds into the {} pot.".format(self.funds, self.pot))
-        self.displayFunds()
 
     def withdrawFunds(self):
 
-        # Ask user how much they wish to withdraw:
-        withdraw_amount = int(input("How much would you like to withdraw into the {} pot?".format(self.pot)))
+        # Ask user if they wish to withdraw:
+        user_confirmation = input("Would you like to withdraw any funds from the {} pot? (please answer Y or N)".format(self.pot))
 
-        # Perform balance calculations:
-        self.funds = self.funds - withdraw_amount
-
-        # Confirm action to user and display updated balances to user:        
-        print("You have withdrawn {} pounds from the {} pot.".format(self.funds, self.pot))
-        self.displayFunds()
+        if (user_confirmation == "Y"):
+            # Ask user how much they wish to withdraw:
+            withdraw_amount = int(input("How much would you like to withdraw into the {} pot?".format(self.pot)))
+            print("You have withdrawn {} pounds from the {} pot.".format(withdraw_amount, self.pot))
+            # Perform balance calculations:
+            self.funds = self.funds - withdraw_amount
+            # Display updated pot balance:
+            self.displayFunds()
+        else:
+            exit
 
     def transferFunds(self, otherPot):
 
-        # Ask user how much they wish to transfer:
-        transfer_amount = int(input("How much do you wish to transfer from the {} pot into the {} pot?".format(self.pot, otherPot.pot)))
+        # Ask user if they wish to transfer:
+        user_confirmation = input("Would you like to withdraw any funds from the {} pot? (please answer Y or N)".format(self.pot))
 
-        # Perform balance calculations:
-        otherPot.funds = otherPot.funds + transfer_amount
-        self.funds = self.funds - transfer_amount
-
-        # Confirm action to user and display updated balances to user:
-        print("You have transferred a total of {} pounds from the {} pot, into the {} pot".format(self.funds, self.pot, otherPot.pot))
-        self.displayFunds()
-        otherPot.displayFunds()
+        if (user_confirmation == "Y"):
+            # Ask user how much they wish to transfer:
+            transfer_amount = int(input("How much do you wish to transfer from the {} pot into the {} pot?".format(self.pot, otherPot.pot)))
+            print("You have transferred a total of {} pounds from the {} pot, into the {} pot".format(transfer_amount, self.pot, otherPot.pot))
+            # Perform balance calculations:
+            otherPot.funds = otherPot.funds + transfer_amount
+            self.funds = self.funds - transfer_amount
+            # Display updated pot balances:
+            self.displayFunds()
+            otherPot.displayFunds()
+        else:
+            exit
 
 ###########################################################################################################
 

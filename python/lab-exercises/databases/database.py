@@ -14,7 +14,7 @@ def executeQuery(sql_query):
         return None
 
 # Part 1.1 – Check whether the Students table already exists:
-check_query = """ IF EXISTS(SELECT TABLE_NAME,TABLE_SCHEMA FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Student' AND TABLE_SCHEMA = 'dbo') BEGIN DROP TABLE Student END"""
+check_query = """IF EXISTS(SELECT TABLE_NAME,TABLE_SCHEMA FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Student' AND TABLE_SCHEMA = 'dbo') BEGIN DROP TABLE Student END"""
 executeQuery(check_query)
 
 # Part 1.2 – Create the Students table:

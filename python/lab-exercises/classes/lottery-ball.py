@@ -5,5 +5,3 @@ the number of balls of each color that are in the hat. Give the object the abili
 pick a random number of balls from the hat, which will then be used to compute the 
 probability of picking a certain distribution of balls over a large number of experiments”
 
-
-

@@ -1,3 +1,4 @@
+
 def getIncomeTax(salary):
 
     personal_allowance = 12570

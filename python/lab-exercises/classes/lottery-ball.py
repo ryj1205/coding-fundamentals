@@ -1,3 +1,7 @@
+## !! PLEASE NOTE THIS IS UNFINISHED !!
+
+# Import the random class:
+import random
 
 ###################################################################
 # Goal: 
@@ -11,4 +15,18 @@
 class LotteryBall:
 
     def __init__(self):
+
+        self.balls = []
+
+    def select_balls(self, num_of_picks):
+
+        picked_balls = random.sample(self.balls, num_of_picks)
+
+###################################################################
+
+hat = LotteryBall()
+
+picked_balls = hat.pick_balls(10)
+
+###################################################################
 

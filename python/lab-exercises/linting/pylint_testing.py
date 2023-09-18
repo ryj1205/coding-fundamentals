@@ -1,5 +1,4 @@
 """ Testing the usage of PyLint """
-
 def count(sequence, item):
     """ Count function """
     sequence_num = 0

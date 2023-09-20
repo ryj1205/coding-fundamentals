@@ -4,6 +4,8 @@
 
 class Vehicle:
 
+    """ This is a class for vehicles """
+
     def __init__(self, name, max_speed, mileage):
         self.name = name
         self.max_speed = max_speed
@@ -13,4 +15,6 @@ class Vehicle:
 # of the Vehicle class
 
 class Bus(Vehicle):
+
+    """ This is a sub class for buses """
     pass

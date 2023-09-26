@@ -18,15 +18,10 @@ class LotteryBall:
         """ Create a list of color-number pairs to draw from randomly """
 
         draw_list = []
-
         for color, number in self.balls.items():
             draw_list.extend([(color, number)] * number)
-
         drawn_balls = random.sample(draw_list, min(num_balls, len(draw_list)))
-
         return drawn_balls
-
-##############################################################################################
 
 balls = {"blue": 5, "green": 3, "orange": 2}
 ball_drawer = LotteryBall(balls)

@@ -1,3 +1,4 @@
+""" Database - Sample SQL Statements """
 
 import pyodbc
 
@@ -22,7 +23,7 @@ create_query = "CREATE TABLE Student ( StudentID int NOT NULL, FirstName nvarcha
 executeQuery(create_query)
 
 # Part 2 – Practice Executing Insert Commands
-students_object = open("python/lab-exercises/databases/students.csv")
+students_object = open("python/lab-exercises/databases/students.csv", encoding="utf-8")
 students_data = students_object.readlines()
 for row in students_data:
     data_split = row.split(",")

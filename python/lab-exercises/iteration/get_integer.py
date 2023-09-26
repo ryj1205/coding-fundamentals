@@ -1,3 +1,4 @@
+""" Integer Range App """
 
 min_value = 1
 max_value = 100

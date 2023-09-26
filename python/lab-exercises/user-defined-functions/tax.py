@@ -1,5 +1,8 @@
+""" Tax Calculator """
 
-def getIncomeTax(salary):
+def get_income_tax(salary):
+
+    """ Main class and methods for calculating tax for year 2023/24 """
 
     personal_allowance = 12570
     tax_percentage = 0
@@ -24,10 +27,8 @@ def getIncomeTax(salary):
     # Return the taxable amount
     return taxable_amount
 
-###########################################
-
-print("The taxable amount you will pay on £12000 is - £" + str(getIncomeTax(12000)))  # -- 0%
-print("The taxable amount you will pay on £28000 is - £" + str(getIncomeTax(28000)))  # -- 20%
-print("The taxable amount you will pay on £35000 is - £" + str(getIncomeTax(35000)))  # -- 40%
-print("The taxable amount you will pay on £150000 is - £" + str(getIncomeTax(150000))) # -- 40%
-print("The taxable amount you will pay on £160000 is - £" + str(getIncomeTax(160000))) # -- 45%
+print("The taxable amount you will pay on £12000 is - £" + str(get_income_tax(12000)))  # -- 0%
+print("The taxable amount you will pay on £28000 is - £" + str(get_income_tax(28000)))  # -- 20%
+print("The taxable amount you will pay on £35000 is - £" + str(get_income_tax(35000)))  # -- 40%
+print("The taxable amount you will pay on £150000 is - £" + str(get_income_tax(150000))) # -- 40%
+print("The taxable amount you will pay on £160000 is - £" + str(get_income_tax(160000))) # -- 45%

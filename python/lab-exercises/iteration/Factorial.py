@@ -1,3 +1,5 @@
+""" Factorial App """
+
 user_input = int(input("Please input a number: "))
 factorial = 1
 number = 1

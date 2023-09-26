@@ -17,4 +17,3 @@ class Vehicle:
 class Bus(Vehicle):
 
     """ This is a sub class for buses """
-    pass

@@ -1,3 +1,5 @@
+""" Investment Application """
+
 initial_investment = 100
 interest_rate = 0.10
 target_value = 1000

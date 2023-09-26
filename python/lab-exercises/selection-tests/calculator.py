@@ -1,3 +1,5 @@
+""" Calculator App """
+
 first_number = int(input("Please input your first number: "))
 second_number = int(input("Please input your second number: "))
 
@@ -12,15 +14,15 @@ print("") # line break
 
 user_selection = int(input("Please input the number of the option you want to select: "))
 
-if (user_selection == 1):
+if user_selection == 1:
     result = first_number + second_number
-elif (user_selection == 2):
+elif user_selection == 2:
     result = first_number - second_number
-elif (user_selection == 3):
+elif user_selection == 3:
     result = first_number * second_number
-elif (user_selection == 4):
+elif user_selection == 4:
     result = first_number / second_number
-elif (user_selection == 5):
+elif user_selection == 5:
     result = first_number ** second_number
 
 print(result)

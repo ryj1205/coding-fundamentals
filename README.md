@@ -14,6 +14,7 @@ I am also interested in the following
 
     - Docker
     - Kubernetes
+    - Amazon Web Services (AWS)
 
 If you spot any mistakes / code that can be simplified, please let me know!!
 

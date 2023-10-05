@@ -9,5 +9,6 @@
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "files.autoSave": "onFocusChange",
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "explorer.compactFolders": false
 }
